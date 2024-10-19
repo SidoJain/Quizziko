@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("assets/bg.jpg");
+}
+
+.panel {
+    background-color: white;
+    width: 90%;
+    max-width: 650px;
+    margin: 100px auto 0px;
+    border-radius: 8px;
+    padding: 30px;
+    height: min-content;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.homeBtn {
+    border: none;
+    border-radius: 4px;
+    background: white;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: navy;
+}
+
+.ques {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.options {
+    color: black;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.options button {
+    background-color: white;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    border-width: 2px;
+    transition: all 0.4s ease;
+    min-height: min-content;
+}
+
+.option4 {
+    visibility: hidden;
+    transform: translateX(150%);
+}
+
+.option5 {
+    visibility: hidden;
+    transform: translateX(-150%);
+}
+
+.option6 {
+    visibility: hidden;
+    transform: translateX(150%);
+}
+
+.options button.categ {
+    visibility: visible;
+    text-align: center;
+    transform: translate(0%);
+    transition: all 1s ease;
+    height: 50px;
+}
+
+.options button.diff {
+    text-align: center;
+}
+
+.option1.diff:hover {
+    background-color: rgba(0, 255, 0, 0.6);
+}
+
+.option2.diff:hover {
+    background-color: rgba(255, 166, 0, 0.6);
+}
+
+.option3.diff:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.option1.diff:focus {
+    background-color: rgba(0, 255, 0, 0.6);
+}
+
+.option2.diff:focus {
+    background-color: rgba(255, 166, 0, 0.6);
+}
+
+.option3.diff:focus {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.options button:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+.options button:focus {
+    background-color: rgb(203, 203, 203);
+}
+
+.options button.correct {
+    background-color: rgba(0, 255, 0, 0.6);
+}
+
+.options button.incorrect {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.buttons {
+    text-align: center;
+}
+
+.checkBtn.notActive {
+    visibility: hidden;
+    transform: translateY(150%);
+}
+
+.checkBtn.active {
+    visibility: visible;
+    max-width: 130px;
+    width: 30vw;
+    font-size: 20px;
+    font-weight: 600;
+    padding-inline: 20px;
+    padding-block: 15px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+}
+
+.checkBtn.active:hover {
+    background-color: navy;
+}
+
+.nextBtn.notActive {
+    visibility: hidden;
+    transform: translateY(150%);
+}
+
+.nextBtn.active {
+    visibility: visible;;
+    max-width: 130px;
+    width: 30vw;
+    font-size: 20px;
+    font-weight: 600;
+    padding-inline: 20px;
+    padding-block: 15px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    transform: translateX(-15%);
+    margin-left: 10px;
+}
+
+.nextBtn.active:hover {
+    background-color: navy;
+}
+
+.nextBtn.started {
+    transform: translateX(0%);
+}
+
+.option1.end {
+    visibility: hidden;
+    transform: translateX(150%);
+    height: 10px;
+}
+
+.option2.end {
+    visibility: hidden;
+    transform: translateX(-150%);
+    height: 10px;
+}
+
+.option3.end {
+    visibility: hidden;
+    transform: translateX(150%);
+    height: 10px;
+}
+
+.option4.end {
+    visibility: hidden;
+    transform: translateX(-150%);
+    height: 10px;
+}
+
+.option5.end {
+    visibility: hidden;
+    transform: translateX(150%);
+    height: 10px;
+}
+
+.option6.end {
+    visibility: hidden;
+    transform: translateX(-150%);
+    height: 10px;
+}
+
+.checkBtn.end {
+    visibility: hidden;
+    transform: translateY(500%);
+    height: 10px;
+}
+
+.nextBtn.end {
+    transform: translate3d(70%, -20%, 0);
+}
+
+.option1.home {
+    transform: translateX(150%);
+    visibility: hidden;
+}
+
+.option2.home {
+    transform: translateX(-150%);
+    visibility: hidden;
+}
+
+.option3.home {
+    transform: translateX(150%);
+    visibility: hidden;
+}
+
+.homePanel {
+    text-align: center;
+}
+
+.yesno {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sure {
+    font-size: 30px;
+    transform: translateX(-250%);
+    transition: all .5s ease;
+}
+
+.sure.move {
+    transform: translateX(0%);
+}
+
+.yes {
+    font-size: 100px;
+    color: green;
+    border: none;
+    margin-left: 10vw;
+    background: none;
+    transform: translateY(150%);
+    transition: all .5s ease;
+}
+
+.no {
+    font-size: 100px;
+    color: red;
+    border: none;
+    margin-right: 10vw;
+    background: none;
+    transform: translateY(150%);
+    transition: all .5s ease;
+}
+
+.yes.move {
+    transform: translateY(0%);
+}
+
+.no.move {
+    transform: translateY(0%);
+}
+
+.nextBtn.home {
+    transform: translateY(400%);
+    visibility: hidden;
+}
+
+.checkBtn.home {
+    transform: translateY(400%);
+    visibility: hidden;
+}
+
+.home2 {
+    height: 2px;
+}
+
+@media screen and (max-width: 500px) {
+    .nextBtn.active {
+        transform: translateX(-7vw);
+    }
+
+    .nextBtn.started {
+        transform: translateX(0%);
+    }
+}

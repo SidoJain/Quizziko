@@ -351,4 +351,18 @@ body {
     .nextBtn.started {
         transform: translateX(0%);
     }
+
+    .nextBtn.home {
+        transform: translateY(400%);
+        visibility: hidden;
+    }
+
+    .home2 {
+        height: 2px;
+    }
+
+    .nextBtn.notActive {
+        visibility: hidden;
+        transform: translateY(150%);
+    }
 }

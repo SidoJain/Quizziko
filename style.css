@@ -330,7 +330,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .nextBtn.active {
-        transform: translateX(-7vw);
+        transform: translateX(-5.7vw);
         visibility: visible;;
         max-width: 130px;
         width: 30vw;

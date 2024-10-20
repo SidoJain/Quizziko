@@ -19,6 +19,21 @@ const yesBtn = document.querySelector('.yes');
 const noBtn = document.querySelector('.no');
 panel.removeChild(homePanel);
 
+class sound {
+    constructor(src) {
+        this.sound = document.createElement('audio');
+        this.sound.src = src;
+        this.sound.setAttribute('preload', 'auto');
+        this.sound.setAttribute('controls', 'none');
+        this.sound.style.display = 'none';
+        document.body.appendChild(this.sound);
+
+    this.play = function () {
+        this.sound.play();
+    };
+    }
+}
+
 let chosenOption;
 let totalNumOfQues;
 let tempQues;
@@ -283,19 +298,6 @@ const restart = async function () {
 	option5.classList.add('categ');
 	option6.classList.add('categ');
 };
-
-function sound(src) {
-	this.sound = document.createElement('audio');
-	this.sound.src = src;
-	this.sound.setAttribute('preload', 'auto');
-	this.sound.setAttribute('controls', 'none');
-	this.sound.style.display = 'none';
-	document.body.appendChild(this.sound);
-
-	this.play = function () {
-		this.sound.play();
-	};
-}
 
 const categoryRemove = async function () {
 	option1.classList.remove('categ');
